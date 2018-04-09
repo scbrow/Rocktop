@@ -20,11 +20,12 @@ namespace Rocktop
         {
             // create a new window instance based on the screen size
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
-
             // If you have defined a root view controller, set it here:
             // Window.RootViewController = myViewController;
-
-            // make the window visible
+            var controller = new BaseViewController();
+            var navController = new UINavigationController(controller);
+            Window.RootViewController = navController;
+            // make the window visib
             Window.MakeKeyAndVisible();
 
             return true;
