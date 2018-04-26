@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +23,7 @@ namespace Rocktop
             var next = new MainView();
             View.BackgroundColor = UIColor.LightGray;
             Title = "Rocktop";
+
             var usernameField = new UITextField
             {
                 Placeholder = "Username",
@@ -56,9 +57,11 @@ namespace Rocktop
                 if (connect("create," + usernameField.Text + "," + passwordField.Text))
                     NavigationController.PushViewController(next, true);
             };
+           
             View.AddSubview(usernameField);
             View.AddSubview(passwordField);
             View.AddSubview(loginButton);
+<<<<<<< HEAD
             View.AddSubview(createButton);
         }
         public bool connect(string input)
@@ -70,6 +73,11 @@ namespace Rocktop
             if (output == 1 || output == 2)
                 return true;
             return false;
+=======
+    
+           
+
+>>>>>>> 291c4ac... * AppDelegate.cs: edits
         }
     }
 }
